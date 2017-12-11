@@ -1,0 +1,59 @@
+package homework2;
+// Class1--> Strats here
+
+public class Bookflight {
+	
+	public static void main(String[] args) 
+	
+	{
+		String toDate = "25/11/2017";
+		System.out.println("Date of Flight is : " + toDate);
+		
+		FlightType typeOfFlight = new FlightType();
+		typeOfFlight.FlightDetail();
+				
+		FlightPrice actualPrice= new FlightPrice();	
+		actualPrice.priceFinal();
+		double priceAfterDiscount = actualPrice.priceFinal();
+		System.out.println("Book Price after discount is : " 
+			+ priceAfterDiscount);
+	}
+}
+// Class1--> ends here
+
+----------------------------------------------------------------------------------------
+package homework2;
+// Class2 --> starts here
+
+public class FlightType {
+	String NameOfFlight = "Air India";
+	int FlightNumb = 302;
+	String Destination ="Delhi";
+	
+	public void FlightDetail() 
+	{
+	
+	System.out.println("Flight Name is : "  + NameOfFlight + 
+						"\nFlight number is : " + FlightNumb + 
+						"\nDetination Place is : " +  Destination);
+	}
+}
+ // Class2 ends here-->
+----------------------------------------------------------------------------------------
+package homework2;
+// Class3 -->Starts here
+
+public class FlightPrice 
+{
+	int flightPrice = 1100;
+	double discountPrice = 10.5;
+	
+	public double priceFinal() 
+	
+	{
+		double finalamount = 0;
+		finalamount = flightPrice - (flightPrice*discountPrice)/100;
+		return finalamount;	
+	}
+}
+----------------------------------------------------------------------------------------
